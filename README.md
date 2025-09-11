@@ -1,2 +1,2 @@
-# Programming--and-Music-1
+# Programming-and-Music-1
 Sonology Class
