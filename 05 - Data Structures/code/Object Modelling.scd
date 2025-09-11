@@ -47,7 +47,7 @@ g.generateAll
 g.playResult
 
 
-/* Create a simple calculator object that can perform basic mathematical
+/* A simple calculator object that can perform basic mathematical
    operations and store results. The calculator should have methods for
    addition, subtraction, multiplication, division, and memory functions. */
 
@@ -55,25 +55,25 @@ c = ();
 c.memory = 0;
 c.lastResult = 0;
 
-c.add = {|ev, a, b| 
+c.plus = {|ev, a, b|
     ev.lastResult = a + b;
     "Result: ".post; ev.lastResult.postln;
     ev.lastResult;
 };
 
-c.subtract = {|ev, a, b| 
+c.minus = {|ev, a, b|
     ev.lastResult = a - b;
     "Result: ".post; ev.lastResult.postln;
     ev.lastResult;
 };
 
-c.multiply = {|ev, a, b| 
+c.times = {|ev, a, b|
     ev.lastResult = a * b;
     "Result: ".post; ev.lastResult.postln;
     ev.lastResult;
 };
 
-c.divide = {|ev, a, b| 
+c.divide = {|ev, a, b|
     if(b != 0, {
         ev.lastResult = a / b;
         "Result: ".post; ev.lastResult.postln;
@@ -86,17 +86,17 @@ c.divide = {|ev, a, b|
 
 c.store = {|ev, value| ev.memory = value; "Stored: ".post; value.postln; };
 c.recall = {|ev| "Memory: ".post; ev.memory.postln; ev.memory; };
-c.clear = {|ev| ev.memory = 0; ev.lastResult = 0; "Cleared".postln; };
+c.clearAll = {|ev| ev.memory = 0; ev.lastResult = 0; "Cleared".postln; };
 
 // Test the calculator
-c.add(10, 5);
-c.multiply(3, 4);
+c.plus(10, 5);
+c.times(3, 4);
 c.store(c.lastResult);
 c.divide(c.recall, 2);
-c.clear;
+c.clearAll;
 
 
-/* Create a text processor object that can manipulate strings in various
+/* A text processor object that can manipulate strings in various
    ways. It should have methods for counting words, finding patterns,
    transforming text, and generating random text. */
 
@@ -105,42 +105,42 @@ t.text = "";
 t.wordCount = 0;
 t.charCount = 0;
 
-t.setText = {|ev, str| 
+t.setText = {|ev, str|
     ev.text = str;
     ev.wordCount = str.split($ ).size;
     ev.charCount = str.size;
     "Text set: ".post; str.postln;
 };
 
-t.countWords = {|ev| 
+t.countWords = {|ev|
     "Word count: ".post; ev.wordCount.postln;
     ev.wordCount;
 };
 
-t.countChars = {|ev| 
+t.countChars = {|ev|
     "Character count: ".post; ev.charCount.postln;
     ev.charCount;
 };
 
-t.toUpper = {|ev| 
+t.toUpper = {|ev|
     ev.text = ev.text.toUpper;
     "Uppercase: ".post; ev.text.postln;
     ev.text;
 };
 
-t.toLower = {|ev| 
+t.toLower = {|ev|
     ev.text = ev.text.toLower;
     "Lowercase: ".post; ev.text.postln;
     ev.text;
 };
 
-t.reverse = {|ev| 
+t.reverse = {|ev|
     ev.text = ev.text.reverse;
     "Reversed: ".post; ev.text.postln;
     ev.text;
 };
 
-t.findPattern = {|ev, pattern| 
+t.findPattern = {|ev, pattern|
     var found = ev.text.find(pattern);
     if(found >= 0, {
         "Pattern found at position: ".post; found.postln;
@@ -150,7 +150,7 @@ t.findPattern = {|ev, pattern|
     found;
 };
 
-t.generateRandom = {|ev, length=10| 
+t.generateRandom = {|ev, length=10|
     var chars = "abcdefghijklmnopqrstuvwxyz ";
     var result = "";
     length.do { result = result ++ chars[chars.size.rand] };
@@ -158,7 +158,7 @@ t.generateRandom = {|ev, length=10|
     result;
 };
 
-t.stats = {|ev| 
+t.stats = {|ev|
     "Text: ".post; ev.text.postln;
     "Words: ".post; ev.wordCount.postln;
     "Characters: ".post; ev.charCount.postln;
