@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////
 //
-//                   PMA03 - Control Flow
+//                   Control Flow
 //
 ////////////////////////////////////////////////////////////////
 
@@ -11,6 +11,9 @@ Iteration, Conditions, Control Flow.
 
 // both must be true
 1 & 1
+
+// with boolean
+true && true
 
 // either one is true
 (1 == 1) || (1 == 2)
