@@ -6,6 +6,47 @@
 
 Basic syntax elements and fundamental language features.
 
+
+////////////// Brackets, Braces, and Parentheses //////////////
+
+// Parentheses ( )
+
+// Function calls
+SinOsc.ar(440, 0, 0.5)
+"hello".postln()
+
+// Grouping expressions
+(2 + 3) * 4
+
+// Brackets [ ]
+
+// Creating arrays
+[1, 2, 3, 4]
+[440, 880, 220]
+["hello", "world", 42]
+
+// Array indexing
+~myArray = [10, 20, 30];
+~myArray[0]  // returns 10
+
+// Braces { }
+
+// Function definition
+~myFunc = { |freq| SinOsc.ar(freq, 0, 0.1) };
+
+// UGen graph for synthesis
+{ SinOsc.ar(440, 0, 0.5) }.play;
+
+// Control structures
+if(true, { "yes".postln }, { "no".postln });
+
+// Multiple statements
+{
+    var freq = 440;
+    SinOsc.ar(freq, 0, 0.2);
+}.play;
+
+
 ////////////////////////// Basic Statements ////////////////////
 
 // semicolon to separate statements
@@ -43,3 +84,5 @@ Basic syntax elements and fundamental language features.
 4 != 5
 6 >= 6
 2 <= 3
+
+{ Wrap.ar(SinOsc.ar(90), LFNoise0.ar(1), LFNoise1.ar(10)) }.play
