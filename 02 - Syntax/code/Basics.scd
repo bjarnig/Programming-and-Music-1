@@ -6,6 +6,23 @@
 
 Basic syntax elements and fundamental language features.
 
+/////////////////////// Play a Sound ///////////////////////////
+
+( // .release
+
+f = { |freq = 60, amp = 0.1|
+	Saw.ar(freq, mul: amp) ! 2;
+};
+
+)
+
+Date.new(
+
+x = f.play;
+
+x.release(2);
+
+x.free
 
 ////////////// Brackets, Braces, and Parentheses //////////////
 
