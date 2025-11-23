@@ -65,7 +65,7 @@
 };
 
 ~reverseWords.value("programming and music");
-~reverseWords.value("composing with sound");
+~reverseWords.value("composing with sound asdf asdfasdf");
 )
 
 /* 3. Write a program that generates two arrays of random numbers,
@@ -168,11 +168,11 @@ arr1.do({|num|
 (
 ~generateWord = {|length, chars="abcdefghijklmnopqrstuvwxyz"|
     var word = "";
-    
+
     length.do({
         word = word ++ chars[chars.size.rand];
     });
-    
+
     word;
 };
 
