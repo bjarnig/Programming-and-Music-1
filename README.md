@@ -58,6 +58,75 @@ music.
   - `EX05 - Solutions.scd` - Exercise solutions
 - PMA06 - Approaches.pdf
 
+### 07 - Exercises
+- Practice exercises covering fundamental concepts
+- **Code files:**
+  - `Set A - Exercises.scd` / `Set A - Solutions.scd` - Exercise set A
+  - `Set B - Exercises.scd` / `Set B - Solutions.scd` - Exercise set B
+  - `Set C - Exercises.scd` / `Set C - Solutions.scd` - Exercise set C
+- PMA07 - Exercises.pdf
+- PMA - Assignment 1 (2025).pdf
+
+### 08 - Routines
+- Temporal control using Routines and Tasks
+- **Code files:**
+  - `Routines.scd` - Routine fundamentals and temporal sequencing
+  - `EX06 - Solutions.scd` - Exercise solutions
+- PMA08 - Routines.pdf
+
+### 09 - Synthesis
+- Introduction to sound synthesis techniques
+- **Code files:**
+  - `Synthesis.scd` - Additive synthesis, noises, filters, and subtractive synthesis
+- PMA09 - Synthesis 1.pdf
+
+### 10 - Modulation
+- Amplitude modulation, ring modulation, and frequency modulation
+- **Code files:**
+  - `Modulation.scd` - Tremolo, AM, ring modulation, and FM synthesis
+  - `LFOs.scd` - Low-frequency oscillators
+  - `Envelopes.scd` - Envelope generators
+  - `SynthDefs.scd` - Synthesizer definitions
+  - `Environment.scd` - Environment setup
+  - `- EX10 - Exercises.scd` - Practice exercises
+  - `- EX09 - Solutions.scd` - Exercise solutions
+- PMA10 - Modulation.pdf
+
+### 11 - Shaping
+- Signal shaping techniques: lag, clipping, folding, wrapping, and quantization
+- **Code files:**
+  - `Shaping.scd` - Waveshaping fundamentals
+  - `Expansion.scd` - Multichannel expansion
+  - `Waveforms.scd` - Waveform generation
+  - `Formants.scd` - Formant synthesis
+  - `Examples.scd` - Practical examples
+  - `Shaping - Exercises.scd` / `Shaping - Solutions.scd` - Practice exercises
+  - `EX10 - Solutions.scd` - Exercise solutions
+
+### 12 - Clocks
+- Timing, scheduling, and temporal coordination
+- **Code files:**
+  - `Clocks.scd` - Clock fundamentals and scheduling
+  - `EX08 - Solutions.scd` - Exercise solutions
+- PMA08 - Clocks.pdf
+
+### 13 - Patterns 1
+- Introduction to pattern-based composition
+- **Code files:**
+  - `PMA11 - Patterns.scd` - Pattern fundamentals
+- PMA11 - Patterns.pdf
+- PMA - Assignment 2 (2025).pdf
+
+### 14 - Patterns 2
+- Advanced pattern techniques and composition strategies
+- **Code files:**
+  - `MorePatterns.scd` - Advanced pattern techniques
+  - `Approaches.scd` - Compositional approaches with patterns
+  - `Examples.scd` - Pattern examples
+  - `Recap.scd` - Pattern concepts review
+  - `Misc.scd` - Additional techniques
+- PMA12 - More Patterns.pdf
+
 ## Resources
 
 [https://www.bjarni-gunnarsson.net/courses](https://www.bjarni-gunnarsson.net/courses)
