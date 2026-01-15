@@ -44,7 +44,7 @@ thisProcess.recompile;
 {
 	var freq = LFNoise0.kr(8).range(200, 800);
 	freq = Lag.kr(freq, 0.05);  // Slide between pitches
-	SinOsc.ar(freq, 0, 0.3) ! 2;
+	SinOsc.ar(freq, 0, 0.1) ! 2;
 }.play
 )
 
@@ -372,7 +372,7 @@ thisProcess.recompile;
 {
 	var sig = LFNoise2.ar(200);
 	var amount = LFNoise2.kr(0.3).range(1, 3);
-	(sig * amount).wrap2(1) * 0.3 ! 2;
+	(sig * amount).wrap2(1) * 0.1 ! 2;
 }.play
 )
 
