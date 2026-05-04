@@ -21,10 +21,8 @@ SynthDef(\percSine, {|freq=440, amp=0.2, rel=0.3|
 	Out.ar(0, sig ! 2);
 }).add;
 
-)
 
-
-( // Filtered saw wave - subtractive synthesis
+// Filtered saw wave - subtractive synthesis
 
 SynthDef(\filtSaw, {|freq=100, cutoff=1000, res=0.3, amp=0.3, rel=0.5|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -33,22 +31,18 @@ SynthDef(\filtSaw, {|freq=100, cutoff=1000, res=0.3, amp=0.3, rel=0.5|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
 
-
-( // Filtered noise - percussive hit
+// Filtered noise - percussive hit
 
 SynthDef(\filtNoise, {|freq=800, bw=0.1, amp=0.3, rel=0.2|
 	var env = EnvGen.ar(Env.perc(0.001, rel), doneAction: 2);
 	var sig = WhiteNoise.ar;
-	sig = BPF.ar(sig, freq, bw, 3);
+	sig = BPF.ar(sig, freq, bw, 8);
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
 
-
-( // FM synthesis - bell-like
+// FM synthesis - bell-like
 
 SynthDef(\fmBell, {|freq=440, ratio=1.4, index=5, amp=0.2, rel=2|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -59,10 +53,8 @@ SynthDef(\fmBell, {|freq=440, ratio=1.4, index=5, amp=0.2, rel=2|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
 
-
-( // Ring modulation
+// Ring modulation
 
 SynthDef(\ringMod, {|freq=300, modFreq=150, amp=0.2, rel=0.5|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -72,10 +64,7 @@ SynthDef(\ringMod, {|freq=300, modFreq=150, amp=0.2, rel=0.5|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
-
-
-( // Waveshaping with fold
+// Waveshaping with fold
 
 SynthDef(\foldSine, {|freq=100, foldAmt=2, amp=0.2, rel=0.4|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -84,10 +73,7 @@ SynthDef(\foldSine, {|freq=100, foldAmt=2, amp=0.2, rel=0.4|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
-
-
-( // Pulse with PWM
+// Pulse with PWM
 
 SynthDef(\pwm, {|freq=100, width=0.5, amp=0.2, rel=0.3|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -95,10 +81,7 @@ SynthDef(\pwm, {|freq=100, width=0.5, amp=0.2, rel=0.3|
 	Out.ar(0, sig * env ! 2);
 }).add;
 
-)
-
-
-( // Additive synthesis - 5 harmonics
+// Additive synthesis - 5 harmonics
 
 SynthDef(\additive, {|freq=200, amp=0.2, rel=1|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -126,7 +109,7 @@ Routine({
 )
 
 
-( // Random FM bells
+( // Random FM
 
 Routine({
 	12.do {
@@ -136,21 +119,21 @@ Routine({
 			\index, rrand(2, 8),
 			\rel, rrand(1, 3)
 		]);
-		rrand(0.3, 0.8).wait;
+		rrand(0.1, 0.3).wait;
 	};
 }).play;
 
 )
 
 
-( // Filtered noise rhythm
+( // Filtered noise
 
 Routine({
 	16.do {|i|
 		var freq = if(i % 4 == 0, 400, 1200);
-		var amp = if(i % 4 == 0, 0.4, 0.2);
+		var amp = if(i % 4 == 0, 2.0, 0.2);
 		Synth(\filtNoise, [\freq, freq, \amp, amp, \rel, 0.1]);
-		0.125.wait;
+		0.1.wait;
 	};
 }).play;
 

@@ -4,13 +4,10 @@
 //
 ////////////////////////////////////////////////////////////////
 
-/*
-   Combining synthesis concepts (classes 09-11) with
-   pattern-based composition (classes 13-14).
-*/
-
 
 ////////////////////////// SynthDefs ////////////////////////////
+
+
 
 
 ( // Simple sine with percussive envelope
@@ -21,10 +18,8 @@ SynthDef(\percSine, {|freq=440, amp=0.2, rel=0.3|
 	Out.ar(0, sig ! 2);
 }).add;
 
-)
 
-
-( // Filtered saw wave - subtractive synthesis
+// Filtered saw wave - subtractive synthesis
 
 SynthDef(\filtSaw, {|freq=100, cutoff=1000, res=0.3, amp=0.3, rel=0.5|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -33,22 +28,18 @@ SynthDef(\filtSaw, {|freq=100, cutoff=1000, res=0.3, amp=0.3, rel=0.5|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
 
-
-( // Filtered noise - percussive hit
+// Filtered noise - percussive hit
 
 SynthDef(\filtNoise, {|freq=800, bw=0.1, amp=0.3, rel=0.2|
 	var env = EnvGen.ar(Env.perc(0.001, rel), doneAction: 2);
 	var sig = WhiteNoise.ar;
-	sig = BPF.ar(sig, freq, bw, 3);
+	sig = BPF.ar(sig, freq, bw, 8);
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
 
-
-( // FM synthesis - bell-like
+// FM synthesis - bell-like
 
 SynthDef(\fmBell, {|freq=440, ratio=1.4, index=5, amp=0.2, rel=2|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -59,10 +50,8 @@ SynthDef(\fmBell, {|freq=440, ratio=1.4, index=5, amp=0.2, rel=2|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
 
-
-( // Ring modulation
+// Ring modulation
 
 SynthDef(\ringMod, {|freq=300, modFreq=150, amp=0.2, rel=0.5|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -72,10 +61,7 @@ SynthDef(\ringMod, {|freq=300, modFreq=150, amp=0.2, rel=0.5|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
-
-
-( // Waveshaping with fold
+// Waveshaping with fold
 
 SynthDef(\foldSine, {|freq=100, foldAmt=2, amp=0.2, rel=0.4|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -84,10 +70,7 @@ SynthDef(\foldSine, {|freq=100, foldAmt=2, amp=0.2, rel=0.4|
 	Out.ar(0, sig * env * amp ! 2);
 }).add;
 
-)
-
-
-( // Pulse with PWM
+// Pulse with PWM
 
 SynthDef(\pwm, {|freq=100, width=0.5, amp=0.2, rel=0.3|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -95,10 +78,7 @@ SynthDef(\pwm, {|freq=100, width=0.5, amp=0.2, rel=0.3|
 	Out.ar(0, sig * env ! 2);
 }).add;
 
-)
-
-
-( // Additive synthesis - 5 harmonics
+// Additive synthesis - 5 harmonics
 
 SynthDef(\additive, {|freq=200, amp=0.2, rel=1|
 	var env = EnvGen.ar(Env.perc(0.01, rel), doneAction: 2);
@@ -139,7 +119,7 @@ Pbind(
 )
 
 
-( // FM bell with controlled ratios
+( // FM with controlled ratios
 
 Pbind(
 	\instrument, \fmBell,
@@ -147,7 +127,7 @@ Pbind(
 	\ratio, Pseq([1.0, 1.4, 2.0], inf),
 	\index, 5,
 	\rel, 1.5,
-	\dur, 0.5
+	\dur, 0.1
 ).play;
 
 )
@@ -352,20 +332,18 @@ Pbind(
 ( // Two patterns playing together
 
 Ppar([
-	// Bass line
 	Pbind(
 		\instrument, \filtSaw,
 		\midinote, Pseq([36, 38, 40, 38], inf),
 		\cutoff, 600,
-		\dur, 1,
+		\dur, 0.5,
 		\rel, 0.8,
 		\amp, 0.3
 	),
-	// Melody
 	Pbind(
 		\instrument, \percSine,
 		\midinote, Prand([60, 64, 67, 72, 76], inf),
-		\dur, 0.25,
+		\dur, 0.125,
 		\rel, 0.2,
 		\amp, 0.2
 	)
@@ -463,7 +441,7 @@ Pbind(
 
 Pbind(
 	\instrument, \filtSaw,
-	\midinote, Penv([48, 72, 36, 60], [12, 12, 12]).round,
+	\midinote, Penv([48, 72, 36, 60], [12, 12, 12]),
 	\cutoff, Penv([200, 4000, 500, 2000], [12, 12, 12]),
 	\dur, 0.15,
 	\rel, 0.2,

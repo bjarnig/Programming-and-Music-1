@@ -127,6 +127,56 @@ music.
   - `Misc.scd` - Additional techniques
 - PMA12 - More Patterns.pdf
 
+### 15 - Review
+- Review of synthesis, SynthDefs, Routines, and Patterns
+- **Code files:**
+  - `Synths and Patterns.scd` - Combining SynthDefs with pattern-based composition
+  - `Synths and Routines.scd` - Combining SynthDefs with Routine-based sequencing
+- PMA15 - Review.pdf
+
+### 16 - GUI
+- Graphical user interfaces in SuperCollider
+- **Code files:**
+  - `GUI.scd` - GUI fundamentals and window/widget creation
+  - `Layouts.scd` - Layout management for GUI components
+  - `Interfaces.scd` - Building interactive control interfaces
+  - `Movement.scd` - Animated and dynamic GUI elements
+  - `Pen.scd` - Custom drawing with the Pen class
+  - `Example.scd` - Practical GUI examples
+  - `- EX16 - Exercises.scd` / `- EX16 - Solutions.scd` - Practice exercises
+- PMA16 - GUI.pdf
+
+### 17 - MIDI & Mapping
+- MIDI communication and parameter mapping
+- **Code files:**
+  - `MIDI.scd` - MIDI input, output, and device interaction
+  - `Mapping.scd` - Parameter mapping and scaling strategies
+  - `Extensions.scd` - SuperCollider extension methods for control
+- PMA15 - Mapping&MIDI.pdf
+
+### 18 - Control
+- Integrating GUI and MIDI for interactive control systems
+- **Code files:**
+  - `GUI.scd` - GUI-based control examples
+  - `MIDI.scd` - MIDI-based control examples
+- PMA18 - Control.pdf
+
+### 19 - Effects
+- Audio effects, signal routing, and feedback
+- **Code files:**
+  - `Effects.scd` - Reverb, delay, and other audio effects
+  - `Feedback.scd` - Feedback networks and self-modulating systems
+  - `Routing.scd` - Bus routing and signal flow
+  - `Sampling.scd` - Sample playback and manipulation
+- PMA20 - Processing.pdf
+
+### 20 - Examples
+- Synthesis and processing examples bringing together course concepts
+- **Code files:**
+  - `Synthesis.scd` - Synthesis technique examples
+  - `Processing.scd` - Audio processing and effects examples
+- PMA20 - Examples.pdf
+
 ## Resources
 
 [https://www.bjarni-gunnarsson.net/courses](https://www.bjarni-gunnarsson.net/courses)
