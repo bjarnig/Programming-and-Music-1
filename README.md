@@ -177,6 +177,26 @@ music.
   - `Processing.scd` - Audio processing and effects examples
 - PMA20 - Examples.pdf
 
+### 21 - More Examples
+- Further examples integrating synthesis, control and processing
+- **Code files:**
+  - `UGens.scd` - Working with unit generators
+  - `Sounds.scd` - Sound design examples
+  - `Effects.scd` - Effects and processing examples
+  - `Buses.scd` - Audio/control bus routing
+  - `Input.scd` - Live audio input processing
+  - `Particles.scd` - Particle-style sound generation
+  - `Defer.scd` - Deferring to the AppClock for GUI/timing
+  - `Examples.scd` - Combined examples
+- PMA21 - Examples.pdf
+
+### 22 - Exercises
+- Final exercises and consolidation
+- **Code files:**
+  - `Exercises.scd` - Practice exercises
+  - `Solutions.scd` - Exercise solutions
+- PMA22 - Exercises.pdf
+
 ## Resources
 
 [https://www.bjarni-gunnarsson.net/courses](https://www.bjarni-gunnarsson.net/courses)
