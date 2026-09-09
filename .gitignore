@@ -1,5 +1,14 @@
 *.key
 
-- assignment 1 -
-- assignment 2 -\ 
+# student work, never tracked
+- assignment 1 -/
+- assignment 2 -/
+- assignment 2 - /
+- assignment 3 -/
+Evaluations/
 _/
+
+# slidev
+node_modules/
+dist/
+.DS_Store
