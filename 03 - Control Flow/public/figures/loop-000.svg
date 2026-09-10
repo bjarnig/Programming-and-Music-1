@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 368" width="940" height="368" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#141414">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#141414"/></marker></defs>
+<text x="470.0" y="22.0" text-anchor="middle" font-size="16" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">a loop is a test, a body, and a way back</text>
+<rect x="300.0" y="40.0" width="130.0" height="50.0" rx="5" fill="none" stroke="#141414" stroke-width="2"/>
+<text x="365.0" y="71.0" text-anchor="middle" font-size="17" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">start</text>
+<path d="M365.0 90.0 L365.0 138.0" fill="none" stroke="#141414" stroke-width="2" marker-end="url(#a)"/>
+<path d="M255 195 L365 140 L475 195 L365 250 Z" fill="none" stroke="#141414" stroke-width="2.5"/>
+<text x="365.0" y="190.0" text-anchor="middle" font-size="16" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">more to do?</text>
+<text x="365.0" y="214.0" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Monaco, Consolas, monospace">i &lt; 100</text>
+<path d="M475.0 195.0 L545.0 195.0" fill="none" stroke="#141414" stroke-width="2"/>
+<path d="M545.0 195.0 L600.0 195.0" fill="none" stroke="#141414" stroke-width="2" marker-end="url(#a)"/>
+<text x="510.0" y="182.0" text-anchor="middle" font-size="14" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">yes</text>
+<rect x="600.0" y="169.0" width="262.0" height="52.0" rx="5" fill="none" stroke="#141414" stroke-width="2"/>
+<text x="731.0" y="194.0" text-anchor="middle" font-size="16" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">run the body</text>
+<text x="731.0" y="213.0" text-anchor="middle" font-size="12" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">one grain, one note, one number</text>
+<path d="M731.0 169.0 L731.0 118.0" fill="none" stroke="#141414" stroke-width="2"/>
+<path d="M731.0 118.0 L170.0 118.0" fill="none" stroke="#141414" stroke-width="2"/>
+<path d="M170.0 118.0 L170.0 118.0" fill="none" stroke="#141414" stroke-width="2"/>
+<path d="M170.0 118.0 L363.0 118.0" fill="none" stroke="#141414" stroke-width="2" marker-end="url(#a)"/>
+<text x="580.0" y="108.0" text-anchor="middle" font-size="14" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">round again, with i one larger</text>
+<path d="M365.0 250.0 L365.0 296.0" fill="none" stroke="#141414" stroke-width="2" marker-end="url(#a)"/>
+<text x="378.0" y="278.0" text-anchor="start" font-size="14" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">no</text>
+<rect x="300.0" y="298.0" width="130.0" height="50.0" rx="5" fill="none" stroke="#141414" stroke-width="2"/>
+<text x="365.0" y="329.0" text-anchor="middle" font-size="17" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">stop</text>
+</svg>

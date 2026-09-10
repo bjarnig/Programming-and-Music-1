@@ -16,8 +16,6 @@ f = { |freq = 60, amp = 0.1|
 
 )
 
-Date.new(
-
 x = f.play;
 
 x.release(2);

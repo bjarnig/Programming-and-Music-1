@@ -335,13 +335,6 @@ All four, with the server boot and the stops in the right places, are in *code/I
 - Read the post window every time
 - Nothing here is expected to make sense yet
 
-<span class="workshop">- workshop -</span>
-
-<!--
-Give them the rest of the session with the file open. The goal is only that SuperCollider is
-installed, boots, and makes a sound on every laptop in the room before they leave.
--->
-
 ---
 class: light
 ---

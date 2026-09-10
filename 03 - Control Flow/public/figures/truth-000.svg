@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 310" width="940" height="310" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#141414">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#141414"/></marker></defs>
+<text x="190.0" y="40.0" text-anchor="middle" font-size="19" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="600">a and b</text>
+<text x="94.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">a</text>
+<text x="190.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">b</text>
+<text x="286.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">result</text>
+<path d="M60.0 88.0 L320.0 88.0" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="94" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="190" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="286" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<path d="M60.0 128.0 L320.0 128.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="94" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="190" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="286" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<path d="M60.0 162.0 L320.0 162.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="94" y="184" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="190" y="184" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="286" y="184" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<path d="M60.0 196.0 L320.0 196.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="94" y="218" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="190" y="218" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="286" y="218" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<path d="M60.0 230.0 L320.0 230.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<path d="M236.0 58.0 L236.0 236.0" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="500.0" y="40.0" text-anchor="middle" font-size="19" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="600">a or b</text>
+<text x="404.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">a</text>
+<text x="500.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">b</text>
+<text x="596.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">result</text>
+<path d="M370.0 88.0 L630.0 88.0" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="404" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="500" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="596" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<path d="M370.0 128.0 L630.0 128.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="404" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="500" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="596" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<path d="M370.0 162.0 L630.0 162.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="404" y="184" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="500" y="184" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="596" y="184" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<path d="M370.0 196.0 L630.0 196.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="404" y="218" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="500" y="218" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="596" y="218" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<path d="M370.0 230.0 L630.0 230.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<path d="M546.0 58.0 L546.0 236.0" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="810.0" y="40.0" text-anchor="middle" font-size="19" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="600">not a</text>
+<text x="750.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">a</text>
+<text x="870.0" y="76.0" text-anchor="middle" font-size="15" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">result</text>
+<path d="M716.0 88.0 L916.0 88.0" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="750" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<text x="870" y="116" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<path d="M716.0 128.0 L916.0 128.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<text x="750" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#141414">true</text>
+<text x="870" y="150" text-anchor="middle" font-size="16" font-family="Menlo, Monaco, Consolas, monospace" fill="#555">false</text>
+<path d="M716.0 162.0 L916.0 162.0" fill="none" stroke="#141414" stroke-width="0.6"/>
+<path d="M810.0 58.0 L810.0 168.0" fill="none" stroke="#141414" stroke-width="1.5"/>
+<text x="470.0" y="292.0" text-anchor="middle" font-size="16" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">and is strict, or is generous, not flips it</text>
+</svg>

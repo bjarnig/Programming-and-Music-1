@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 310" width="940" height="310" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#141414">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#141414"/></marker></defs>
+<text x="470.0" y="46.0" text-anchor="middle" font-size="16" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">every line has the same shape</text>
+<text x="470" y="108" text-anchor="middle" font-size="34" font-family="Menlo, Monaco, Consolas, monospace"><tspan fill="#141414">440</tspan><tspan fill="#555">.</tspan><tspan fill="#141414">midicps</tspan><tspan fill="#555">(</tspan><tspan fill="#555">)</tspan></text>
+<path d="M354.0 126.0 L354.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M354.0 136.0 L422.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M422.0 126.0 L422.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M443.0 126.0 L443.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M443.0 136.0 L567.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M567.0 126.0 L567.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M585.0 126.0 L585.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M585.0 136.0 L617.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M617.0 126.0 L617.0 136.0" fill="none" stroke="#141414" stroke-width="1.2"/>
+<path d="M388.0 136.0 L388.0 156.0" fill="none" stroke="#141414" stroke-width="2"/>
+<text x="388.0" y="176.0" text-anchor="middle" font-size="17" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">receiver</text>
+<path d="M505.0 136.0 L505.0 156.0" fill="none" stroke="#141414" stroke-width="2"/>
+<text x="505.0" y="176.0" text-anchor="middle" font-size="17" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">message</text>
+<path d="M601.0 136.0 L601.0 196.0" fill="none" stroke="#141414" stroke-width="2"/>
+<text x="601.0" y="216.0" text-anchor="middle" font-size="17" fill="#141414" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">arguments</text>
+<text x="388.0" y="198.0" text-anchor="middle" font-size="14" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">the object</text>
+<text x="505.0" y="198.0" text-anchor="middle" font-size="14" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">what you ask it</text>
+<text x="601.0" y="238.0" text-anchor="middle" font-size="14" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif">here, none</text>
+<path d="M700.0 108.0 L772.0 108.0" fill="none" stroke="#141414" stroke-width="2" marker-end="url(#a)"/>
+<text x="736.0" y="96.0" text-anchor="middle" font-size="13" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">returns</text>
+<text x="800" y="118" text-anchor="start" font-size="30" font-family="Menlo, Monaco, Consolas, monospace">880.0</text>
+<text x="470.0" y="286.0" text-anchor="middle" font-size="16" fill="#555" font-family="Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif" font-style="italic">the return value is another object, so it can be asked something in turn</text>
+</svg>
