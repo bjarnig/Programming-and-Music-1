@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////
 //
-//              Five things, one per part of the year
+//              Four things, one per part of the year
 //
 ////////////////////////////////////////////////////////////////
 
@@ -83,32 +83,6 @@ Pbind(
 	\dur, 0.25,
 	\amp, 0.3
 ).play;
-)
-
-
-CmdPeriod.run
-
-
-//////////////////////// A controller //////////////////////////
-
-/* A knob on a MIDI controller, reaching into a pattern that is already
-   running. This needs hardware, so it is a preview rather than an
-   exercise. Classes 17 to 19 are built on this. */
-
-MIDIClient.init;
-
-MIDIIn.connectAll;
-
-( // With PatternProxy
-var pattern, notes;
-
-notes = PatternProxy(Pwhite(20, 80));
-pattern = Pbind(\midinote, notes, \dur, 0.2).play;
-
-MIDIFunc.cc({|val|
-	val.postln;
-	notes.source = Pwhite(val/2, val);
-})
 )
 
 
