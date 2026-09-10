@@ -62,7 +62,16 @@ The better a language is in providing useful **abstractions**, the less one has 
 
 SuperCollider is a **dynamically typed**, single-inheritance, garbage-collected and **object-oriented** language created with musical applications in mind.
 
-<span class="note">Version 3.14. The language is one of two programs; the other is the sound server, which is not the subject today.</span>
+- **Dynamically typed.** A variable has no declared type. What a value is gets settled while the program runs, so the same variable can hold a number now and an array later
+- **Single inheritance.** Every class has exactly one superclass, so the classes form a tree with `Object` at the root
+- **Garbage-collected.** Memory is reclaimed for you. Nothing has to be freed by hand
+- **Object-oriented.** There are no plain values sitting outside the system. A number is an object, and so is a function
+
+<!--
+Do not dwell on these four, but do say them, because each one removes a worry the students
+would otherwise carry from other languages. Dynamic typing especially: they never declare
+a type all year, and it is worth saying that this is deliberate rather than missing.
+-->
 
 ---
 layout: center
@@ -75,14 +84,15 @@ Programming with SuperCollider
 class: light
 ---
 
-# Every Line Has the Same Shape
+# Objects and Messages
 
 <div class="shot"><img src="/figures/object-message-000.svg" /></div>
 
 <!--
 Draw this once and refer back to it all year. Everything is an object, and the only thing
 you ever do is send one a message. Read a line aloud in these words: "four forty, give me
-your midicps". The answer is another object, which is why chaining works.
+your cpsmidi". The answer, 69, is the midi note for A440, and it is another object, which
+is why chaining works.
 -->
 
 ---
@@ -155,7 +165,7 @@ The argument **keyword** can be used to target a specific argument in the list o
 
 # Arguments
 
-The same message four ways. Only the third one says what it means.
+The same message four ways. Only the third one states them explicitly.
 
 ```supercollider {*|1-2|4-5|7-8|10-11|*}
 // no arguments specified
@@ -170,8 +180,6 @@ The same message four ways. Only the third one says what it means.
 // use * to split a list into separate arguments
 Array.series(*[10, 5, 2])
 ```
-
-<span class="q">Which of these will you still understand in three weeks?</span>
 
 <!--
 Keywords are not decoration, they are the difference between code you can read later and
@@ -192,20 +200,51 @@ Programs are created by sequences of one or more statements. Statements in Super
 
 ---
 
-# Expressions and Statements
+# Expressions
 
-```supercollider {*|1-2|4-5|7-8|10-11|*}
-// simple expression
+Every one of these produces a value, and the post window shows it.
+
+```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
+// arithmetic
 2 * 4
 
-// expression with strings
+// two strings joined
 "sono" ++ "logy"
 
-// assignment statement
+// there is no times-before-plus rule, so this is nine and not seven
+1 + 2 * 3
+
+// a message to a number, whose answer is another number
+60.midicps.round(0.01)
+
+// a range, written as one expression
+(1..5)
+```
+
+<!--
+Run 1 + 2 * 3 and let them be wrong about it first. Left to right, always, and parentheses
+are the only fix. It is the single most common arithmetic surprise in the first weeks.
+-->
+
+---
+
+# Statements
+
+A program is a sequence of statements, separated by semicolons and evaluated top to bottom.
+
+```supercollider {*|1-2|4-9|11-12|*}
+// an assignment statement, ended with a semicolon
 x = [1, 2, 3, 4].rotate(1);
 
-// an if statement, which is also an expression: it returns a value
-if(1.0.rand >= 0.5) { "0.5 or higher" } { "lower than 0.5" }
+// three statements in a row, and the block returns the last value
+(
+a = [60, 64, 67];
+b = a.sum;
+b / a.size
+)
+
+// an if is a statement and an expression: it returns a value
+y = if(1.0.rand >= 0.5) { "0.5 or higher" } { "lower than 0.5" };
 ```
 
 <span class="note">Shift-Enter evaluates one line. Command-Enter evaluates the whole block between the outer parentheses.</span>
@@ -236,7 +275,7 @@ An empty variable has the value **`nil`**.
 class: light
 ---
 
-# Three Kinds of Box
+# Variables
 
 <div class="shot"><img src="/figures/variables-000.svg" /></div>
 
@@ -316,8 +355,6 @@ SuperCollider supports **operator overloading**.
 
 Operators can thus be applied to a variety of different objects, for example numbers, UGens and collections.
 
-<span class="q">What should adding one array to another mean? SuperCollider has an answer, and it is worth disagreeing with.</span>
-
 ---
 
 # Comments
@@ -378,6 +415,8 @@ The following literals exist:
 - **Characters**, `$a`
 - **Special**, `true`, `false`, `nil`
 - **Literal arrays**, `#[1, 2, 'abc', "def", 4]`
+
+<span class="note">A symbol and a string are different objects: `'abc' == "abc"` is false. A literal array cannot be changed after it is written.</span>
 
 ---
 
@@ -473,5 +512,19 @@ Exercises
 3. Calculate a multiplication, for example 2 times 4, and print the result to the post window. Store the result in a variable.
 
 4. Create an array that contains the date of today, the date of tomorrow, and the number of lessons you have each day.
+
+5. Ask four different objects what class they are, and print each answer to the post window.
+
+---
+
+# Exercises
+
+6. Store a frequency in a variable, convert it to a midi note number, and store that in a second variable. Then do it the other way round.
+
+7. Write the same message call twice, once with its arguments in order and once with argument keywords. Check that both give the same answer.
+
+8. Make a literal array with `#` and then try to change one of its elements. Read the error you get, and say in one sentence what it means.
+
+9. Using only what is in this class, write three statements that end with a sound.
 
 <span class="workshop">- workshop -</span>

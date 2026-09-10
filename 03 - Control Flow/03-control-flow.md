@@ -35,9 +35,17 @@ class: light
 
 # Control Flow
 
-> "Control flow is the order function calls, instructions, and statements are executed or evaluated when a program is running. Control flow statements are used to determine what section of code is run in a program at a given time. An example of a control flow statement is an if/else statement."
+Control flow is the **order** in which statements are evaluated while a program runs, and the statements that decide that order.
 
-<div class="src">(Computer Hope)</div>
+> "We should do our utmost best to shorten the conceptual gap between the static program and the dynamic process, to make the correspondence between the program (spread out in text space) and the process (spread out in time) as trivial as possible."
+
+<div class="src">(Edsger W. Dijkstra, Go To Statement Considered Harmful, Communications of the ACM, 1968)</div>
+
+<!--
+Dijkstra's letter is the origin of the whole subject, and this sentence is the reason the
+class exists: what you write is laid out in space, what happens is laid out in time, and
+the job of if, do and while is to keep those two as close together as possible.
+-->
 
 ---
 
@@ -275,7 +283,7 @@ In SuperCollider, iteration can be executed in various ways:
 class: light
 ---
 
-# The Shape of a Loop
+# Loop Process
 
 <div class="shot"><img src="/figures/loop-000.svg" /></div>
 
@@ -333,7 +341,7 @@ x.nextN(32)
 
 # A Hundred Sounds
 
-The whole argument of the course, in one line.
+Loops allow for dynamic behaviour.
 
 ```supercollider {*|1-2|4-5|*}
 // a hundred grains, none of them typed out
@@ -371,7 +379,7 @@ The list decides the music, and the loop just walks it.
 ~freqs.round(0.1)
 ```
 
-<span class="note">`do` throws the results away. `collect` keeps them. Class 05 is built on that difference.</span>
+<span class="note">`do` does not keep results while `collect` keeps them.</span>
 
 ---
 
@@ -381,8 +389,6 @@ The list decides the music, and the loop just walks it.
 - Change every number in the hundred-sounds line and listen to what each one does
 - Write a loop that never ends, then stop it with `Cmd .`
 - Try to write the same thing twice, once with `if` and once with `case`
-
-<span class="note">Next class is **Functions**, which is where the braces you have been typing get a name and a purpose.</span>
 
 ---
 layout: center
