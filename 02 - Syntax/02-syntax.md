@@ -165,7 +165,7 @@ The argument **keyword** can be used to target a specific argument in the list o
 
 # Arguments
 
-The same message four ways. Only the third one states them explicitly.
+The same message is written four ways. Only the third one states the arguments explicitly.
 
 ```supercollider {*|1-2|4-5|7-8|10-11|*}
 // no arguments specified
@@ -369,7 +369,7 @@ SuperCollider supports **single line** and **multiline** comments.
 
 # Operators and Comments
 
-The same operator, applied to three different kinds of thing.
+The same operator is applied to three different kinds of object.
 
 ```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
 // two numbers
@@ -456,9 +456,9 @@ and behave differently. \freq is a symbol; "freq" is a string; Pbind wants the s
 
 ---
 
-# Syntax That Makes a Sound
+# Sound
 
-Everything so far, in four lines that do something.
+Four lines using the material from this class.
 
 ```supercollider {*|1-2|4-5|7-8|10-11|*}
 // a literal array of midi notes, converted to frequencies

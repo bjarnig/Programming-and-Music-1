@@ -93,7 +93,7 @@ whole of program logic is these three, combined and nested.
 
 # Boolean Logic
 
-Every one of these evaluates to `true` or to `false`, and nothing else.
+Every one of these evaluates to `true` or `false`.
 
 ```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
 // either one is true
@@ -139,7 +139,7 @@ Related conditionals are **`switch`** and **`case`**, which offer many branches,
 class: light
 ---
 
-# One Test, Two Roads
+# If and Else
 
 <div class="shot"><img src="/figures/ifelse-000.svg" /></div>
 
@@ -152,7 +152,7 @@ whole if returns the value of whichever ran, which is why you can assign it to a
 
 # Conditionals
 
-The test comes first, then the two functions.
+The test comes first, followed by the two functions.
 
 ```supercollider {*|1-2|4-8|10-11|*}
 // toss a coin, then an if and an else clause
@@ -172,9 +172,9 @@ if(Date.getDate.second % 2 == 0, { "an even second".postln })
 
 ---
 
-# Many Branches
+# Switch and Case
 
-When there are more than two roads, `switch` and `case` say it better than nested ifs.
+`switch` and `case` provide more than two branches without nesting `if` statements.
 
 ```supercollider {*|1-6|8-15|*}
 // switch offers branching for different possibilities
@@ -217,7 +217,7 @@ SuperCollider uses brackets, braces and parentheses in its language syntax.
 class: light
 ---
 
-# Three Shapes
+# Bracket Types
 
 <div class="shot"><img src="/figures/brackets-000.svg" /></div>
 
@@ -228,9 +228,9 @@ a confusing error is the wrong one of these three.
 
 ---
 
-# Brackets in Practice
+# Brackets, Braces, and Parentheses
 
-Each shape, and the thing it makes.
+Each bracket type, and what it produces.
 
 ```supercollider {*|1-2|4-5|7-9|11-13|*}
 // brackets make an array
@@ -294,9 +294,9 @@ with a different way of writing the test.
 
 ---
 
-# Counting
+# do, for and forBy
 
-The counter is handed to the function, which is what makes each pass different.
+The counter is passed to the function as an argument, so each pass differs.
 
 ```supercollider {*|1-2|4-5|7-8|10-11|*}
 // do something a number of times
@@ -312,7 +312,7 @@ for(10, 50, { arg i; i.postln })
 forBy(10, 100, 10, { arg i; i.postln })
 ```
 
-<span class="q">Where does `i` come from? Nobody declared it.</span>
+<span class="q">Where does `i` come from, given that it is never declared?</span>
 
 <!--
 The answer to the question: the loop passes it in as an argument, exactly like any other
@@ -321,7 +321,7 @@ function argument from last week. That connection is the whole point of asking.
 
 ---
 
-# Looping Until
+# while
 
 Sometimes the count is not known in advance, only the condition to stop.
 
@@ -339,7 +339,7 @@ x.nextN(32)
 
 ---
 
-# A Hundred Sounds
+# Iteration and Sound
 
 Loops allow for dynamic behaviour.
 
@@ -351,7 +351,7 @@ Loops allow for dynamic behaviour.
 Routine({ 100.do({ |i| Synth(\ping, [\freq, 200 * (i + 1)]); 0.05.wait }) }).play
 ```
 
-<span class="q">You wrote one line. Which of the hundred sounds did you choose?</span>
+<span class="q">One line was written. Which of the hundred sounds was chosen?</span>
 
 <!--
 This is the moment the class exists for. Run it, wait for the reaction, then run it again
@@ -361,9 +361,9 @@ top so percSine is already on the server.
 
 ---
 
-# Iterating a Collection
+# do and collect
 
-The list decides the music, and the loop just walks it.
+The loop walks a list, and the list supplies the values.
 
 ```supercollider {*|1-2|4-6|8-10|*}
 // one note per item, straight through the list
