@@ -24,11 +24,6 @@ mdc: true
   <a href="https://www.bjarni-gunnarsson.net">https://www.bjarni-gunnarsson.net</a>
 </div>
 
-<!--
-The class the whole course turns on. By the end of it a single line has to make a hundred
-sounds, or the leverage argument stays theoretical for another two weeks.
--->
-
 ---
 class: light
 ---
@@ -40,12 +35,6 @@ Control flow is the **order** in which statements are evaluated while a program 
 > "We should do our utmost best to shorten the conceptual gap between the static program and the dynamic process, to make the correspondence between the program (spread out in text space) and the process (spread out in time) as trivial as possible."
 
 <div class="src">(Edsger W. Dijkstra, Go To Statement Considered Harmful, Communications of the ACM, 1968)</div>
-
-<!--
-Dijkstra's letter is the origin of the whole subject, and this sentence is the reason the
-class exists: what you write is laid out in space, what happens is laid out in time, and
-the job of if, do and while is to keep those two as close together as possible.
--->
 
 ---
 
@@ -84,18 +73,13 @@ class: light
 
 <div class="shot"><img src="/figures/truth-000.svg" /></div>
 
-<!--
-Read the tables out loud rather than explaining them. And is strict, or is generous. The
-whole of program logic is these three, combined and nested.
--->
-
 ---
 
 # Boolean Logic
 
 Every one of these evaluates to `true` or `false`.
 
-```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
+```supercollider
 // either one is true
 (1 == 1) || (1 == 2)
 
@@ -111,11 +95,6 @@ not(1 == 2) && not(1 == 3)
 // and is also a method, so it can be written the other way round
 ("sono" == "logy").or("sono" == "sono")
 ```
-
-<!--
-0.3.coin is the one they will use. Run it ten times and let them see it is not a rule but
-a tendency. It comes back in class 14 as the whole basis of Pwrand.
--->
 
 ---
 
@@ -143,18 +122,13 @@ class: light
 
 <div class="shot"><img src="/figures/ifelse-000.svg" /></div>
 
-<!--
-The part beginners miss: both branches are functions, and only one of them ever runs. The
-whole if returns the value of whichever ran, which is why you can assign it to a variable.
--->
-
 ---
 
 # Conditionals
 
 The test comes first, followed by the two functions.
 
-```supercollider {*|1-2|4-8|10-11|*}
+```supercollider
 // toss a coin, then an if and an else clause
 if(0.5.coin, { "true it is" }, { "false sometimes" })
 
@@ -176,7 +150,7 @@ if(Date.getDate.second % 2 == 0, { "an even second".postln })
 
 `switch` and `case` provide more than two branches without nesting `if` statements.
 
-```supercollider {*|1-6|8-15|*}
+```supercollider
 // switch offers branching for different possibilities
 (
 var number = [1, 2, 3].choose;
@@ -195,11 +169,6 @@ case
     { i == 0 } { \true };
 )
 ```
-
-<!--
-switch matches a value; case evaluates tests. Students reach for nested ifs first and end
-up with something unreadable, so show the alternative early even if they ignore it.
--->
 
 ---
 
@@ -221,18 +190,13 @@ class: light
 
 <div class="shot"><img src="/figures/brackets-000.svg" /></div>
 
-<!--
-Worth putting up whenever someone is stuck for the rest of the year. Nine times out of ten
-a confusing error is the wrong one of these three.
--->
-
 ---
 
 # Brackets, Braces, and Parentheses
 
 Each bracket type, and what it produces.
 
-```supercollider {*|1-2|4-5|7-9|11-13|*}
+```supercollider
 // brackets make an array
 b = [0, 1, 2, 3];
 
@@ -287,18 +251,13 @@ class: light
 
 <div class="shot"><img src="/figures/loop-000.svg" /></div>
 
-<!--
-Three parts and no more: a test, a body, a way back. Every loop in the list is this picture
-with a different way of writing the test.
--->
-
 ---
 
 # do, for and forBy
 
 The counter is passed to the function as an argument, so each pass differs.
 
-```supercollider {*|1-2|4-5|7-8|10-11|*}
+```supercollider
 // do something a number of times
 7.do({ rrand(10, 100).postln })
 
@@ -314,18 +273,13 @@ forBy(10, 100, 10, { arg i; i.postln })
 
 <span class="q">Where does `i` come from, given that it is never declared?</span>
 
-<!--
-The answer to the question: the loop passes it in as an argument, exactly like any other
-function argument from last week. That connection is the whole point of asking.
--->
-
 ---
 
 # while
 
 Sometimes the count is not known in advance, only the condition to stop.
 
-```supercollider {*|1-3|5-7|*}
+```supercollider
 // fill p with random pitches until it has at least 32
 p = [];
 while({ p.size < 32 }, { p = p ++ Array.series(rrand(2, 4), 64.rand, 1) });
@@ -343,7 +297,7 @@ x.nextN(32)
 
 Loops allow for dynamic behaviour.
 
-```supercollider {*|1-2|4-5|*}
+```supercollider
 // a hundred grains, none of them typed out
 100.do({ Synth(\ping, [\freq, exprand(200, 4000), \amp, 0.03]) })
 
@@ -353,19 +307,13 @@ Routine({ 100.do({ |i| Synth(\ping, [\freq, 200 * (i + 1)]); 0.05.wait }) }).pla
 
 <span class="q">One line was written. Which of the hundred sounds was chosen?</span>
 
-<!--
-This is the moment the class exists for. Run it, wait for the reaction, then run it again
-with a different range. The instrument is defined in Iteration.scd; play the file from the
-top so percSine is already on the server.
--->
-
 ---
 
 # do and collect
 
 The loop walks a list, and the list supplies the values.
 
-```supercollider {*|1-2|4-6|8-10|*}
+```supercollider
 // one note per item, straight through the list
 [60, 63, 67, 70].do({ |note| Synth(\ping, [\freq, note.midicps]) })
 

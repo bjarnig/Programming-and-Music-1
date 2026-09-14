@@ -211,7 +211,6 @@ class: light
 
 <div class="shot"><img src="/figures/sclang-server-000.svg" /></div>
 
-
 ---
 
 # The Language
@@ -250,7 +249,7 @@ Code
 
 A function containing a unit generator, sent `.play`.
 
-```supercollider {*|1-2|4-5|*}
+```supercollider
 // play with defaults and through a function
 { SinOsc.ar(110) }.play
 
@@ -260,19 +259,13 @@ A function containing a unit generator, sent `.play`.
 
 Important is `Cmd .` It stops everything.
 
-<!--
-Boot the server first and let them watch the post window. Then run line 2 and say nothing.
-The three arguments in the second one are frequency, phase and amplitude, but do not
-explain them yet: the point is only that a thing that made sound took arguments.
--->
-
 ---
 
 # Many at Once
 
 The same amount of code but now as as sixteen oscillators. Then twenty, with a frequency and an amplitude variation for each one.
 
-```supercollider {*|1-2|4-13|*}
+```supercollider
 // Mix with multichannel expansion
 { Mix.new(Blip.ar(Array.series(16, 100, 10), 50, 0.04)) ! 2 }.play
 
@@ -294,7 +287,7 @@ The same amount of code but now as as sixteen oscillators. Then twenty, with a f
 
 A named instrument, sent to the server once, played by name after that.
 
-```supercollider {*|3|4|5|6|11|*}
+```supercollider
 (
 
 SynthDef(\percSine, {|freq=440, amp=0.2, rel=0.3|
@@ -316,7 +309,7 @@ The **arguments** are the parts left open. Everything else is fixed.
 
 The same instrument, played as a stream of events. No scheduling written by hand.
 
-```supercollider {*|2|3|4-5|*}
+```supercollider
 Pbind(
 	\instrument, \percSine,
 	\midinote, Pseq([60, 64, 67, 72], inf),

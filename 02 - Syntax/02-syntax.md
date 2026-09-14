@@ -67,12 +67,6 @@ SuperCollider is a **dynamically typed**, single-inheritance, garbage-collected 
 - **Garbage-collected.** Memory is reclaimed for you. Nothing has to be freed by hand
 - **Object-oriented.** There are no plain values sitting outside the system. A number is an object, and so is a function
 
-<!--
-Do not dwell on these four, but do say them, because each one removes a worry the students
-would otherwise carry from other languages. Dynamic typing especially: they never declare
-a type all year, and it is worth saying that this is deliberate rather than missing.
--->
-
 ---
 layout: center
 class: divider
@@ -87,13 +81,6 @@ class: light
 # Objects and Messages
 
 <div class="shot"><img src="/figures/object-message-000.svg" /></div>
-
-<!--
-Draw this once and refer back to it all year. Everything is an object, and the only thing
-you ever do is send one a message. Read a line aloud in these words: "four forty, give me
-your cpsmidi". The answer, 69, is the midi note for A440, and it is another object, which
-is why chaining works.
--->
 
 ---
 
@@ -129,7 +116,7 @@ There exist **instance methods** and **class methods**, such as `new`.
 
 Making one, asking it something, chaining the answer.
 
-```supercollider {*|1-2|4-5|7-9|11-12|*}
+```supercollider
 // creation using new
 p = Point.new(1, 2)
 
@@ -143,11 +130,6 @@ r.top
 // messages can be chained, left to right
 "reverse it and convert to upper".toUpper.reverse
 ```
-
-<!--
-Run each line and read the post window. The last one is the argument for the diagram:
-toUpper returns a string, so the string can be asked to reverse itself.
--->
 
 ---
 
@@ -167,7 +149,7 @@ The argument **keyword** can be used to target a specific argument in the list o
 
 The same message is written four ways. Only the third one states the arguments explicitly.
 
-```supercollider {*|1-2|4-5|7-8|10-11|*}
+```supercollider
 // no arguments specified
 { SinOsc.ar }.play
 
@@ -180,11 +162,6 @@ The same message is written four ways. Only the third one states the arguments e
 // use * to split a list into separate arguments
 Array.series(*[10, 5, 2])
 ```
-
-<!--
-Keywords are not decoration, they are the difference between code you can read later and
-code you cannot. The second line is loud, warn them before running it.
--->
 
 ---
 
@@ -204,7 +181,7 @@ Programs are created by sequences of one or more statements. Statements in Super
 
 Every one of these produces a value, and the post window shows it.
 
-```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
+```supercollider
 // arithmetic
 2 * 4
 
@@ -221,18 +198,13 @@ Every one of these produces a value, and the post window shows it.
 (1..5)
 ```
 
-<!--
-Run 1 + 2 * 3 and let them be wrong about it first. Left to right, always, and parentheses
-are the only fix. It is the single most common arithmetic surprise in the first weeks.
--->
-
 ---
 
 # Statements
 
 A program is a sequence of statements, separated by semicolons and evaluated top to bottom.
 
-```supercollider {*|1-2|4-9|11-12|*}
+```supercollider
 // an assignment statement, ended with a semicolon
 x = [1, 2, 3, 4].rotate(1);
 
@@ -279,12 +251,6 @@ class: light
 
 <div class="shot"><img src="/figures/variables-000.svg" /></div>
 
-<!--
-The single-letter interpreter variables are the reason for the joke in the code file: s is
-the server, so assigning a string to it breaks everything afterwards. Environment variables
-with the tilde are what most student code should use.
--->
-
 ---
 
 # Variable Types
@@ -313,7 +279,7 @@ Different kinds of variables exist in SuperCollider:
 
 # Assignments
 
-```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
+```supercollider
 // single assignment
 c = 2 + 4;
 
@@ -329,11 +295,6 @@ c = 2 + 4;
 // series assignment, with start, increment and end
 a = (0, 2 .. 64);
 ```
-
-<!--
-The last one is worth dwelling on: it is thirty-three numbers written in nine characters,
-and it is the first hint of what class 03 is about.
--->
 
 ---
 
@@ -371,7 +332,7 @@ SuperCollider supports **single line** and **multiline** comments.
 
 The same operator is applied to three different kinds of object.
 
-```supercollider {*|1-2|4-5|7-8|10-11|13-14|*}
+```supercollider
 // two numbers
 1 + 2
 
@@ -434,7 +395,7 @@ In SuperCollider it is possible to query an object about its **class**, its **me
 
 Ask anything what it is. The answer is always a class.
 
-```supercollider {*|1-2|4-5|7-8|10-12|*}
+```supercollider
 // a float
 1.2.class
 
@@ -449,18 +410,13 @@ Ask anything what it is. The answer is always a class.
 'something'.isKindOf(Symbol)
 ```
 
-<!--
-Symbol against String is the single most common early confusion, because they look alike
-and behave differently. \freq is a symbol; "freq" is a string; Pbind wants the symbol.
--->
-
 ---
 
 # Sound
 
 Four lines using the material from this class.
 
-```supercollider {*|1-2|4-5|7-8|10-11|*}
+```supercollider
 // a literal array of midi notes, converted to frequencies
 [60, 64, 67, 72].midicps
 
@@ -475,11 +431,6 @@ Four lines using the material from this class.
 ```
 
 <span class="note">Four lines, and every idea from this class is in them: literals, messages, arguments, variables.</span>
-
-<!--
-Worth ending on. Ask them to name the receiver, the message and the arguments in each line
-before you run it. This is also the first time this class makes a sound.
--->
 
 ---
 
