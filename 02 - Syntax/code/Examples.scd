@@ -83,6 +83,8 @@ a = (0, 2 .. 64);
 // two arrays, added element by element
 [1, 2] + [3, 4]
 
+// an array and a single number: the number is applied to every element
+[1, 2, 3] * 10
 // ++ joins rather than adds
 [1, 2] ++ [3, 4]
 

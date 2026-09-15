@@ -143,6 +143,8 @@ d
 // binary operators take a left and right operand
 [1,2] + [3,4]
 
+// an array and a single number: the number is applied to every element
+[1, 2, 3] * 10
 // ++ joins two sequencable collections
 [1,2] ++ [3,4]
 

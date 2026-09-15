@@ -339,6 +339,9 @@ The same operator is applied to three different kinds of object.
 // two arrays, added element by element
 [1, 2] + [3, 4]
 
+// an array and a single number: the number is applied to every element
+[1, 2, 3] * 10
+
 // ++ joins rather than adds
 [1, 2] ++ [3, 4]
 
@@ -460,9 +463,9 @@ Exercises
 
 2. Create an array using `Array.series` that goes from 1 to 10 and then from 10 to 1. Finally multiply the array by 2.
 
-3. Calculate a multiplication, for example 2 times 4, and print the result to the post window. Store the result in a variable.
+3. Write down what you think `1 + 2 * 3` returns, then run it. Using the same three numbers, add parentheses so that the expression returns **7**, and then so that it returns **9**.
 
-4. Create an array that contains the date of today, the date of tomorrow, and the number of lessons you have each day.
+4. Use a single series assignment, `# a, b, c = [ ... ]`, to fill three variables at once. Then write one statement that leaves `a` holding what `c` held.
 
 5. Ask four different objects what class they are, and print each answer to the post window.
 
@@ -470,12 +473,28 @@ Exercises
 
 # Exercises
 
-6. Store a frequency in a variable, convert it to a midi note number, and store that in a second variable. Then do it the other way round.
+6. Call `Array.series` twice so both return the same array, once with arguments in order and once with keywords. Then change one keyword and say which part of the array moved.
 
-7. Write the same message call twice, once with its arguments in order and once with argument keywords. Check that both give the same answer.
+7. Store the same result twice: once in a `var` inside a parenthesised block, once in `~result`. Ask for both afterwards and say which one still exists.
 
-8. Make a literal array with `#` and then try to change one of its elements. Read the error you get, and say in one sentence what it means.
+8. Make a literal array with `#`, then try to replace one of its elements. Paste the error into a comment and write one sentence saying what it is telling you.
 
-9. Using only what is in this class, write three statements that end with a sound.
+9. Convert **441** to a midi note number and back to a frequency. Print the midi note number, and say in a comment why it is not a whole number.
+
+10. Make an array of four midi notes, convert it to frequencies with one message, and use `~tone` to play each of the four in turn. Release them over two seconds.
+
+---
+
+# Exercises
+
+11. Put `.postln` in the **middle** of a calculation so you can see an intermediate value without splitting the statement in two. Write a comment saying why that is possible.
+
+12. Build a whole-tone scale as seven midi notes with `Array.series`, and turn the whole array into frequencies with a single message.
+
+13. Detune a three-note chord by **adding a second array** to it, then convert to frequencies. Keep the detuning small enough to be heard as beating rather than as a wrong note.
+
+14. Evaluate `69 + 0.5.midicps` and then `(69 + 0.5).midicps`. One is a quarter-tone above A440 and the other is not musical at all. Say which is which, and why.
+
+15. Ask a number what class it is, then ask that class for its `superclass`, and keep going until you arrive at `Object`. Write the chain down.
 
 <span class="workshop">- workshop -</span>
